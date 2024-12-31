@@ -6,6 +6,22 @@ footer {
     font: 14px/150% var(--font-family);
 }
 
+footer div {
+    display: flex;
+    gap: 24px;
+}
+
 footer span:nth-child(1) { /* 1º filho do footer, ou seja, o span*/
     margin-right: auto;
+}
+
+@media (width <= 30em) {
+    footer {
+        display: grid;
+        justify-items: center;
+    }
+
+    footer span:nth-child(1) { /* 1º filho do footer, ou seja, o span*/
+        margin-right: 0;
+    }
 }

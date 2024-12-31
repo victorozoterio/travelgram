@@ -1,12 +1,37 @@
 main {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 24px;
     padding-block: 24px; /* Aplica um espaço no top e no bottom do container */
 }
 
 main img {
-    width: 286px;
-    height: 286px;
+    width: calc(33% - 13px);
+    height: auto;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
+}
+
+@media (30em < width < 60em) {
+    main img {
+        width: calc(50% - 12px);
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+}
+
+@media (width <= 30em) {
+    main {
+        gap: 16px;
+        padding-block: 16px; /* Aplica um espaço no top e no bottom do container */
+    }
+
+    main img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
 }

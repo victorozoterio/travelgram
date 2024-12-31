@@ -22,3 +22,17 @@ nav ul li:last-child img {
     object-fit: cover;
     border-radius: 50%;
 }
+
+@media (width < 60em) {
+    nav {
+        padding-block: 16px;
+    }
+
+    nav ul {
+        gap: 0px;
+
+        & li:nth-child(1) {
+            margin-right: 16px;
+        }
+    }
+}
